@@ -93,14 +93,6 @@ INSERT INTO products(name, categoryId, description) VALUES('Lechuga', '3', 'Und.
 INSERT INTO products(name, categoryId, description) VALUES('Tomate', '3', 'Kg de Lechuga');
 
 
-/* Poblar facturas 10 */
-
-INSERT INTO invoice (CostumerId, detailID, date, resultInvoiceId)  VALUES( 1, 1, '06-01-2020', 1);
-
-
-
-
-
 /* FOREIGN KEY */
 
 
@@ -119,3 +111,33 @@ ALTER TABLE details ADD FOREIGN KEY (invoiceNum) REFERENCES invoice(invoiceNum);
 
 ALTER TABLE details ADD FOREIGN KEY (productId) REFERENCES products(productsId);
 
+
+
+
+/* Poblar tabla details de 10  facturas*/
+
+INSERT INTO details ( productId, qty, unitvalue, detailtotalvalue) VALUES (1, 2
+, 500, 1000 );
+INSERT INTO details ( productId, qty, unitvalue, detailtotalvalue) VALUES (2, 3
+, 350, 1500 );
+INSERT INTO details ( productId, qty, unitvalue, detailtotalvalue) VALUES (5, 3
+, 1800, 5400 );
+INSERT INTO details ( productId, qty, unitvalue, detailtotalvalue) VALUES (2, 2
+, 350, 700 );
+INSERT INTO details ( productId, qty, unitvalue, detailtotalvalue) VALUES (8, 3
+, 600, 1800 );
+INSERT INTO details ( productId, qty, unitvalue, detailtotalvalue) VALUES (3, 1
+, 800, 800 );
+INSERT INTO details ( productId, qty, unitvalue, detailtotalvalue) VALUES (4, 2
+, 2200, 4400 );
+INSERT INTO details ( productId, qty, unitvalue, detailtotalvalue) VALUES (5, 3
+, 1800, 5400 );
+INSERT INTO details ( productId, qty, unitvalue, detailtotalvalue) VALUES (6, 4
+, 2000, 8000 );
+INSERT INTO details ( productId, qty, unitvalue, detailtotalvalue) VALUES (4, 1
+, 2200, 2200 );
+select * from details;
+
+/* Poblar datos de tabla Invoice */
+
+INSERT INTO invoices(costumerId, detailID, date, resultInvoice) VALUES(1, 1, 2020-01-06, 1);
