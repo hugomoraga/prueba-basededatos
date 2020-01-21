@@ -138,6 +138,48 @@ INSERT INTO details ( productId, qty, unitvalue, detailtotalvalue) VALUES (4, 1
 , 2200, 2200 );
 select * from details;
 
+/* Poblar datos de tabla resulInvoice */
+
+INSERT INTO resultInvoice(detailTotalValue, iva, totalValueInvoice) VALUES(1000
+, 190, 1190);
+INSERT INTO resultInvoice(detailTotalValue, iva, totalValueInvoice) VALUES(1050
+, 200, 1250);
+INSERT INTO resultInvoice(detailTotalValue, iva, totalValueInvoice) VALUES(5400
+, 1026, 6426);
+INSERT INTO resultInvoice(detailTotalValue, iva, totalValueInvoice) VALUES(700,
+ 133, 833);
+INSERT INTO resultInvoice(detailTotalValue, iva, totalValueInvoice) VALUES(1800
+, 342, 2142);
+INSERT INTO resultInvoice(detailTotalValue, iva, totalValueInvoice) VALUES(800,
+ 152, 952);
+INSERT INTO resultInvoice(detailTotalValue, iva, totalValueInvoice) VALUES(4400
+, 836, 5236);
+INSERT INTO resultInvoice(detailTotalValue, iva, totalValueInvoice) VALUES(5400
+, 1026, 6426);
+INSERT INTO resultInvoice(detailTotalValue, iva, totalValueInvoice) VALUES(8000
+, 1520, 9520);
+INSERT INTO resultInvoice(detailTotalValue, iva, totalValueInvoice) VALUES(2200
+, 418, 2618);
+
+
 /* Poblar datos de tabla Invoice */
 
-INSERT INTO invoices(costumerId, detailID, date, resultInvoice) VALUES(1, 1, 2020-01-06, 1);
+INSERT INTO invoice( costumerid, detailid, date, resultinvoiceid) VALUES (1, 1, '2020-01-06', 1);
+      
+INSERT INTO invoice( costumerid, detailid, date, resultinvoiceid) VALUES (1, 2, '2020-01-06', 2);
+      
+INSERT INTO invoice( costumerid, detailid, date, resultinvoiceid) VALUES (2, 3, '2020-01-07', 3);
+      
+INSERT INTO invoice( costumerid, detailid, date, resultinvoiceid) VALUES (2, 4, '2020-01-07', 4);
+      
+INSERT INTO invoice( costumerid, detailid, date, resultinvoiceid) VALUES (2, 5, '2020-01-07', 5);
+      
+INSERT INTO invoice( costumerid, detailid, date, resultinvoiceid) VALUES (3, 6, '2020-01-08', 6);
+      
+INSERT INTO invoice( costumerid, detailid, date, resultinvoiceid) VALUES (4, 7, '2020-01-08', 7);
+      
+INSERT INTO invoice( costumerid, detailid, date, resultinvoiceid) VALUES (4, 8, '2020-01-08', 8);
+      
+INSERT INTO invoice( costumerid, detailid, date, resultinvoiceid) VALUES (4, 9, '2020-01-08', 9);
+      
+INSERT INTO invoice( costumerid, detailid, date, resultinvoiceid) VALUES (4, 10, '2020-01-08', 10);
