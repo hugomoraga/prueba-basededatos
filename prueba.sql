@@ -183,3 +183,28 @@ INSERT INTO invoice( costumerid, detailid, date, resultinvoiceid) VALUES (4, 8, 
 INSERT INTO invoice( costumerid, detailid, date, resultinvoiceid) VALUES (4, 9, '2020-01-08', 9);
       
 INSERT INTO invoice( costumerid, detailid, date, resultinvoiceid) VALUES (4, 10, '2020-01-08', 10);
+
+UPDATE details SET invoiceNum=1 WHERE detailId=1;
+UPDATE details SET invoiceNum=2 WHERE detailId=2;
+UPDATE details SET invoiceNum=3 WHERE detailId=3;
+UPDATE details SET invoiceNum=4 WHERE detailId=4;
+UPDATE details SET invoiceNum=5 WHERE detailId=5;
+UPDATE details SET invoiceNum=6 WHERE detailId=6;
+UPDATE details SET invoiceNum=7 WHERE detailId=7;
+UPDATE details SET invoiceNum=8 WHERE detailId=8;
+UPDATE details SET invoiceNum=9 WHERE detailId=9;
+UPDATE details SET invoiceNum=10 WHERE detailId=10;
+
+
+/* ¿Que cliente realizó la compra más cara? */
+
+select name from costumers where id in (select costumerid from invoice where resultinvoiceid in (select resultinvoiceid from  resultinvoice where totalvalueinvoice=(select max(totalvalueinvoice) from resultinvoice)));
+
+
+/* ¿Que cliente pagó sobre 100 de monto?*/
+
+select name from costumers where id in (select costumerid from invoice where resultinvoiceid in (select resultinvoiceid from resultinvoice where totalvalueinvoice > 100));
+
+/* ¿Cuantos clientes han comprado el producto 6*/
+
+select count (*) from details where productid=6;
